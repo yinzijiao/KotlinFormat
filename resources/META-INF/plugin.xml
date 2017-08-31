@@ -1,0 +1,38 @@
+<idea-plugin version="2">
+    <id>com.kotlinformat.plugin</id>
+    <name>kotlinformat</name>
+    <version>1.0.0</version>
+    <vendor email="1527698149@qq.com" url="">yzj</vendor>
+
+    <description><![CDATA[
+      This is a collection of plugins for android studio, Two kinds of apk packing methods, translations and format json string
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <depends>com.intellij.modules.androidstudio</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="jsonformat" anchor="right" factoryClass="com.kotlinformat.tool.JsonWindowFactory"/>
+    </extensions>
+
+    <actions>
+        <action id="Translation" class="com.kotlinformat.action.YDTranslation" text="Translation">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
